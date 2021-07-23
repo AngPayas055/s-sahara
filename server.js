@@ -6,7 +6,9 @@ const mongoose = require("mongoose");
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://ssadmin:ssVjn2kFbEFnvGttr@jcluster.z4eiq.mongodb.net/notesDB")
+mongoose.connect("mongodb+srv://ssadmin:ssVjn2kFbEFnvGttr@jcluster.z4eiq.mongodb.net/notesDB",{useNewUrlParser: true, useUnifiedTopology: true })
+
+
 
 app.use("/", require("./routes/noteRoute"));
 
